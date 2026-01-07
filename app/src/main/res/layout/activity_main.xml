@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:gravity="top">
+
+    <!-- Título -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BlueItalic"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="40dp" />
+
+    <!-- Etiqueta para el campo de entrada -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Escribe tu texto:"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- EditText para entrada de texto -->
+    <EditText
+        android:id="@+id/editTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe aquí..."
+        android:minHeight="140dp"
+        android:gravity="top|start"
+        android:padding="16dp"
+        android:background="@drawable/input_rounded_background"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:textColorHint="@color/text_secondary"
+        android:inputType="textMultiLine|textCapSentences"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Etiqueta para el resultado -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Texto convertido:"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="12dp" />
+
+    <!-- TextView para mostrar el resultado -->
+    <TextView
+        android:id="@+id/textViewOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="140dp"
+        android:padding="16dp"
+        android:background="@drawable/input_rounded_background"
+        android:textSize="16sp"
+        android:textColor="@color/text_primary"
+        android:text=""
+        android:gravity="top|start"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Botón para copiar -->
+    <Button
+        android:id="@+id/buttonCopy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copiar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:background="@drawable/button_blue_rounded"
+        android:padding="18dp"
+        android:elevation="4dp"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>
+
