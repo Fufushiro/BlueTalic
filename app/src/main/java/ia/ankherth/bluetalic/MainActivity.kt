@@ -56,11 +56,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Convierte texto ASCII a texto itálico Unicode usando Mathematical Italic.
+     * Convierte texto ASCII a texto itálico Unicode usando Mathematical Sans-Serif Italic.
      * 
      * Rangos Unicode:
-     * - A-Z (U+0041-U+005A) → U+1D434 – U+1D44D
-     * - a-z (U+0061-U+007A) → U+1D44E – U+1D467
+     * - A-Z (U+0041-U+005A) → U+1D608 – U+1D621
+     * - a-z (U+0061-U+007A) → U+1D622 – U+1D63B
      * 
      * Los números, espacios y símbolos se mantienen sin modificar.
      * 
@@ -74,14 +74,14 @@ class MainActivity : AppCompatActivity() {
             val codePoint = char.code
             
             when {
-                // Letras mayúsculas A-Z (U+0041-U+005A) → U+1D434-U+1D44D
+                // Letras mayúsculas A-Z (U+0041-U+005A) → U+1D608-U+1D621
                 codePoint in 0x0041..0x005A -> {
-                    val italicCodePoint = codePoint - 0x0041 + 0x1D434
+                    val italicCodePoint = codePoint - 0x0041 + 0x1D608
                     result.append(Character.toChars(italicCodePoint))
                 }
-                // Letras minúsculas a-z (U+0061-U+007A) → U+1D44E-U+1D467
+                // Letras minúsculas a-z (U+0061-U+007A) → U+1D622-U+1D63B
                 codePoint in 0x0061..0x007A -> {
-                    val italicCodePoint = codePoint - 0x0061 + 0x1D44E
+                    val italicCodePoint = codePoint - 0x0061 + 0x1D622
                     result.append(Character.toChars(italicCodePoint))
                 }
                 // Mantener todos los demás caracteres (números, espacios, símbolos)
